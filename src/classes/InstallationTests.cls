@@ -26,6 +26,7 @@ private class InstallationTests {
 	        system.assertEquals(c.status, 'Closed');
     	}
         Test.stopTest(); 
+		//developer 1 added this comment
     }
     static testmethod void testWarehouseSync() {
         WarehouseCalloutService.runWarehouseEquipmentSync();
