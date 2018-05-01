@@ -12,8 +12,9 @@ private class InstallationTests {
 		Case mTestCase = new Case();
 		newCases.add(mTestCase);			
 		}
+		//Developer 2 just added these comments 
 		insert newCases;
-		
+		 
 	}	
     static testmethod void testMaintenanceRequest() {
     	Test.startTest();
