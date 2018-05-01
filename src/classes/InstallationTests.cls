@@ -7,18 +7,25 @@
 private class InstallationTests {
 	@testSetup
 	static void createData(){
+		List<Case> newCases = new List<Case>();
+		for(Integer i = 0; i < 149; i++){
 		Case mTestCase = new Case();
-
-		
-		insert mTestCase;
+		newCases.add(mTestCase);			
+		}
+		insert newCases;
 		
 	}	
     static testmethod void testMaintenanceRequest() {
     	Test.startTest();
-    	Case mCases = [select id, status, Date_Reported__c from Case limit 1];
-        MaintenanceRequestHelper.updateWorkOrders();
-     	System.assertEquals(mCases.status, 'New');
-        Test.stopTest();
+    	List<Case> mCases = [select id, status, Date_Reported__c from Case];
+		for(Case c: mCases){
+    		system.assertEquals(c.status, 'New');
+	    	c.status = 'Closed';
+	    	update c;
+	        MaintenanceRequestHelper.updateWorkOrders();
+	        system.assertEquals(c.status, 'Closed');
+    	}
+        Test.stopTest(); 
     }
     static testmethod void testWarehouseSync() {
         WarehouseCalloutService.runWarehouseEquipmentSync();
