@@ -33,6 +33,7 @@ private class InstallationTests {
         WarehouseCalloutService.runWarehouseEquipmentSync();
     }    
     static testmethod void testSomethingElse(){
+    	//this comment should be overwriten eventually
     	System.debug('Testing a method as developer2');
     }
 	static testMethod void thisIsAWeirTest(){
