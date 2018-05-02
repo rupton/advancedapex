@@ -35,4 +35,7 @@ private class InstallationTests {
     static testmethod void testSomethingElse(){
     	System.debug('Testing a method as developer2');
     }
+	static testMethod void thisIsAWeirTest(){
+		// these changes shouldn't cause a merge conflict
+	}
 }
