@@ -32,4 +32,7 @@ private class InstallationTests {
     static testmethod void testWarehouseSync() {
         WarehouseCalloutService.runWarehouseEquipmentSync();
     }    
+    static testmethod void testSomethingElse(){
+    	System.debug('Testing a method as developer2');
+    }
 }
