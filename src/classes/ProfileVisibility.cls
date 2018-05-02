@@ -31,8 +31,12 @@ private class ProfileVisibility {
 			testAccounts.add(a);
 		}
 		insert testAccounts;
+<<<<<<< HEAD
 		//some more comment from developer 1
 		
+=======
+		//making some changes
+>>>>>>> 882896d4a096383b167c6a9eb87551ef1f86b941
 	}
 		static User createUser(String name, String profile, String role){
 		Profile p = [SELECT Id from Profile where Name = :profile];
