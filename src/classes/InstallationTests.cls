@@ -38,5 +38,6 @@ private class InstallationTests {
     }
 	static testMethod void thisIsAWeirTest(){
 		// these changes shouldn't cause a merge conflict
+		//attempting to push from developer 1 so a push from developer 2 requires a pull first
 	}
 }
