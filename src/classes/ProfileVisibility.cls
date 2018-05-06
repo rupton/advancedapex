@@ -23,7 +23,7 @@
 private class ProfileVisibility {
 
 	@testSetup
-	static void createTestData(){
+	static void createTestData(){  
 		List<Account>testAccounts = new List<Account>();
 		for(Integer i = 0; i < 200; i++){
 			Account a = new Account();
